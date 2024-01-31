@@ -1,25 +1,22 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include <stdlib.h>
 
 int main() {
     printf("PROJECT 2: C LOOPS GAME\n");
-    bool guessed = false; //booleans are returned as integers apparently!
+    int guessed = 0;
     int guess = 0;
     int num = 8;
-    while (guessed == false){
+    while (guessed != 1){
+        guessed = 0;
         printf("Enter a number:\n ");
-        guess = scanf("%d", &num);
-
+        scanf("%d", &guess);
         if (guess == num){
-            printf("Correct.\n");
-            guessed = true;
+            printf("Correct\n");
+            guessed = 1;
         }
         else{
-            printf("Incorrect. Try again\n");
+            printf("Incorrect\n");
         }
-
-
     }
     return 0;
 }
